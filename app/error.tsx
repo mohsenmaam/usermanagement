@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { AlertCircle, RefreshCw } from 'lucide-react';
 
 /**
- * Error Component for App Router
- * Displayed when an error occurs
+ * کامپوننت Error برای App Router
+ * نمایش داده می‌شود وقتی خطایی رخ می‌دهد
  */
 export default function Error({
   error,
@@ -48,10 +48,10 @@ export default function Error({
 
           {/* Error Message */}
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Oops! Something went wrong
+            اوه! مشکلی پیش آمد
           </h2>
           <p className="text-gray-600 mb-6">
-            We encountered an unexpected error. Don't worry, you can try again.
+            ما با یک خطای غیرمنتظره مواجه شدیم. نگران نباشید، می‌توانید دوباره تلاش کنید.
           </p>
 
           {/* Error Details (Development only) */}
@@ -71,7 +71,7 @@ export default function Error({
             className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-200"
           >
             <RefreshCw size={20} />
-            Try Again
+            تلاش دوباره
           </motion.button>
 
           {/* Back to Home */}
@@ -81,7 +81,7 @@ export default function Error({
             whileTap={{ scale: 0.98 }}
             className="inline-block mt-4 text-primary-600 hover:text-primary-700 font-medium"
           >
-            ← Back to Home
+            ← بازگشت به صفحه اصلی
           </motion.a>
         </div>
 

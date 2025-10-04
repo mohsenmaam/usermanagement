@@ -5,8 +5,8 @@ import { Search, Home, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 /**
- * Not Found Component (404 Page)
- * Displayed when a page is not found
+ * کامپوننت Not Found (صفحه 404)
+ * نمایش داده می‌شود وقتی صفحه پیدا نشود
  */
 export default function NotFound() {
   return (
@@ -54,10 +54,10 @@ export default function NotFound() {
 
         {/* Message */}
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Page Not Found
+          صفحه یافت نشد
         </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto">
-          Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+          اوه! صفحه‌ای که به دنبال آن هستید وجود ندارد. ممکن است جابجا شده یا حذف شده باشد.
         </p>
 
         {/* Action Buttons */}
@@ -69,7 +69,7 @@ export default function NotFound() {
               className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-200"
             >
               <Home size={20} />
-              Back to Home
+              بازگشت به صفحه اصلی
             </motion.button>
           </Link>
 
@@ -80,7 +80,7 @@ export default function NotFound() {
             className="px-8 py-4 rounded-xl border-2 border-primary-500 text-primary-600 font-medium flex items-center gap-2 hover:bg-primary-50 transition-all duration-200"
           >
             <ArrowLeft size={20} />
-            Go Back
+            بازگشت
           </motion.button>
         </div>
 

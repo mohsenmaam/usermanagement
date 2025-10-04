@@ -6,8 +6,8 @@ import { X, Save, User, Mail, Phone, Globe, MapPin, Briefcase, Loader2 } from 'l
 import { User as UserType } from '@/types/user.types';
 
 /**
- * UserForm Component - Presentational Component
- * Beautiful form with animations and validation
+ * کامپوننت UserForm - کامپوننت Presentational
+ * فرم زیبا با انیمیشن و اعتبارسنجی
  */
 interface UserFormProps {
   user?: UserType;
@@ -78,10 +78,10 @@ const UserForm: React.FC<UserFormProps> = ({
           </motion.button>
           <h2 className="text-2xl font-bold text-white flex items-center gap-2">
             <User size={28} />
-            {user ? 'Edit User' : 'Create New User'}
+            {user ? 'ویرایش کاربر' : 'ایجاد کاربر جدید'}
           </h2>
           <p className="text-white/80 mt-1">
-            {user ? 'Update user information' : 'Fill in the details to create a new user'}
+            {user ? 'به‌روزرسانی اطلاعات کاربر' : 'جزئیات را برای ایجاد کاربر جدید پر کنید'}
           </p>
         </div>
 
@@ -92,14 +92,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <User size={16} className="text-primary-500" />
-                Full Name *
+                نام کامل *
               </label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="علی احمدی"
                 className={`
                   w-full px-4 py-3 rounded-xl border-2 transition-all duration-200
                   focus:outline-none focus:ring-2 focus:ring-primary-500/50
@@ -128,14 +128,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <User size={16} className="text-secondary-500" />
-                Username *
+                نام کاربری *
               </label>
               <input
                 type="text"
                 name="username"
                 value={formData.username}
                 onChange={handleChange}
-                placeholder="johndoe"
+                placeholder="ali_ahmadi"
                 className={`
                   w-full px-4 py-3 rounded-xl border-2 transition-all duration-200
                   focus:outline-none focus:ring-2 focus:ring-primary-500/50
@@ -164,14 +164,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <Mail size={16} className="text-primary-500" />
-                Email Address *
+                آدرس ایمیل *
               </label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="john@example.com"
+                placeholder="ali@example.com"
                 className={`
                   w-full px-4 py-3 rounded-xl border-2 transition-all duration-200
                   focus:outline-none focus:ring-2 focus:ring-primary-500/50
@@ -200,14 +200,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <Phone size={16} className="text-green-500" />
-                Phone Number *
+                شماره تلفن *
               </label>
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+1 234 567 8900"
+                placeholder="09123456789"
                 className={`
                   w-full px-4 py-3 rounded-xl border-2 transition-all duration-200
                   focus:outline-none focus:ring-2 focus:ring-primary-500/50
@@ -236,7 +236,7 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <Globe size={16} className="text-blue-500" />
-                Website
+                وبسایت
               </label>
               <input
                 type="text"
@@ -252,14 +252,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <MapPin size={16} className="text-red-500" />
-                City
+                شهر
               </label>
               <input
                 type="text"
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                placeholder="New York"
+                placeholder="تهران"
                 className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
               />
             </div>
@@ -268,14 +268,14 @@ const UserForm: React.FC<UserFormProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
                 <Briefcase size={16} className="text-orange-500" />
-                Company Name
+                نام شرکت
               </label>
               <input
                 type="text"
                 name="companyName"
                 value={formData.companyName}
                 onChange={handleChange}
-                placeholder="Acme Corp"
+                placeholder="شرکت نمونه"
                 className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
               />
             </div>
@@ -290,7 +290,7 @@ const UserForm: React.FC<UserFormProps> = ({
               whileTap={{ scale: 0.98 }}
               className="flex-1 px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors"
             >
-              Cancel
+              انصراف
             </motion.button>
             <motion.button
               type="submit"
@@ -302,12 +302,12 @@ const UserForm: React.FC<UserFormProps> = ({
               {loading ? (
                 <>
                   <Loader2 size={20} className="animate-spin" />
-                  Saving...
+                  در حال ذخیره...
                 </>
               ) : (
                 <>
                   <Save size={20} />
-                  {user ? 'Update User' : 'Create User'}
+                  {user ? 'به‌روزرسانی' : 'ایجاد کاربر'}
                 </>
               )}
             </motion.button>

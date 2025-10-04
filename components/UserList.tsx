@@ -7,8 +7,8 @@ import UserCard from './UserCard';
 import EmptyState from './EmptyState';
 
 /**
- * UserList Component - Container Component
- * Manages the list of users with grid layout
+ * کامپوننت UserList - کامپوننت Container
+ * مدیریت لیست کاربران با چیدمان Grid
  */
 interface UserListProps {
   users: UserType[];
@@ -19,7 +19,7 @@ interface UserListProps {
 
 const UserList: React.FC<UserListProps> = ({ users, onEdit, onDelete, isSearching = false }) => {
   if (users.length === 0) {
-    return <EmptyState isSearching={isSearching} message={isSearching ? "No users match your search" : "No users found"} />;
+    return <EmptyState isSearching={isSearching} message={isSearching ? "هیچ کاربری با جستجوی شما مطابقت ندارد" : "کاربری یافت نشد"} />;
   }
 
   return (

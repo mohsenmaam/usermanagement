@@ -1,15 +1,20 @@
-# 🚀 User Management System
+# 🎯 سیستم مدیریت کاربران
 
-A modern, beautiful, and fully-featured user management system built with **Next.js 14**, **React**, **TypeScript**, and **TailwindCSS**. This project demonstrates best practices in frontend development including SOLID principles, clean architecture, and stunning UI/UX.
+یک سیستم مدیریت کاربران مدرن، زیبا و کاملاً ویژگی‌دار ساخته شده با **Next.js 14**، **React**، **TypeScript** و **TailwindCSS**. این پروژه بهترین شیوه‌های توسعه فرانت‌اند را نشان می‌دهد، از جمله اصول SOLID، معماری پاک و رابط کاربری/رابط کاربری شگفت‌انگیز.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14.0-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-18.2-blue?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?style=for-the-badge&logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-3.3-38bdf8?style=for-the-badge&logo=tailwind-css)
 
-## ✨ Features
+## ✨ ویژگی‌ها
 
-### 🎨 Beautiful UI/UX
+### 🎨 رابط کاربری/رابط کاربری زیبا
+- **طراحی مدرن**: رابط کاربری تمیز و حرفه‌ای با جلوه‌های گرادیانی
+- **انیمیشن‌های صاف**: انیمیشن‌های Framer Motion در سراسر پروژه
+- **طراحی واکنش‌گرا**: رابط کاربری عالی در موبایل، تبلت و دسکتاپ
+- **جلوه‌های شیشه‌ای**: جلوه‌های مدرن شیشه‌ای
+- **حالت تاریک**: پشتیبانی آسان از حالت تاریک
 - **Modern Design**: Clean, professional interface with gradient effects
 - **Smooth Animations**: Framer Motion powered animations throughout
 - **Responsive Layout**: Perfect on mobile, tablet, and desktop

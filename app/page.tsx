@@ -13,8 +13,8 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import toast from 'react-hot-toast';
 
 /**
- * Main Page Component - Container Component
- * Manages all user operations and state with SSR support
+ * کامپوننت صفحه اصلی - کامپوننت Container
+ * مدیریت تمام عملیات کاربران و state با پشتیبانی SSR
  */
 export default function HomePage() {
   const { users, loading, error, fetchUsers, deleteUser, searchUsers } = useUsers();
@@ -22,7 +22,7 @@ export default function HomePage() {
   const [selectedUser, setSelectedUser] = useState<User | undefined>(undefined);
   const [isSearching, setIsSearching] = useState(false);
 
-  // Initialize user form hook
+  // مقداردهی اولیه hook فرم کاربر
   const { 
     loading: formLoading, 
     error: formError, 
@@ -32,7 +32,7 @@ export default function HomePage() {
     clearErrors 
   } = useUserForm({
     onSuccess: (user) => {
-      toast.success(selectedUser ? 'User updated successfully!' : 'User created successfully!');
+      toast.success(selectedUser ? 'کاربر با موفقیت به‌روزرسانی شد!' : 'کاربر با موفقیت ایجاد شد!');
       fetchUsers();
       handleCloseForm();
     }
@@ -61,9 +61,9 @@ export default function HomePage() {
   const handleDelete = async (id: number) => {
     const success = await deleteUser(id);
     if (success) {
-      toast.success('User deleted successfully!');
+      toast.success('کاربر با موفقیت حذف شد!');
     } else {
-      toast.error('Failed to delete user');
+      toast.error('خطا در حذف کاربر');
     }
   };
 
@@ -74,7 +74,7 @@ export default function HomePage() {
 
   const handleRefresh = () => {
     fetchUsers();
-    toast.success('Users refreshed!');
+    toast.success('لیست کاربران به‌روزرسانی شد!');
   };
 
   return (
@@ -111,11 +111,11 @@ export default function HomePage() {
               </div>
               <div>
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                  User Management
+                  مدیریت کاربران
                 </h1>
                 <p className="text-sm text-gray-600 flex items-center gap-1">
                   <Sparkles size={14} className="text-yellow-500" />
-                  Modern Dashboard System
+                  سیستم داشبورد مدرن
                 </p>
               </div>
             </motion.div>
@@ -129,7 +129,7 @@ export default function HomePage() {
                 className="px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium flex items-center gap-2 transition-all duration-200 shadow-md hover:shadow-lg"
               >
                 <RefreshCw size={18} />
-                <span className="hidden sm:inline">Refresh</span>
+                <span className="hidden sm:inline">به‌روزرسانی</span>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -138,7 +138,7 @@ export default function HomePage() {
                 className="px-6 py-2 rounded-xl bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 <Plus size={18} />
-                <span>New User</span>
+                <span>کاربر جدید</span>
               </motion.button>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
           <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-600 font-medium">Total Users</p>
+                <p className="text-sm text-gray-600 font-medium">تعداد کاربران</p>
                 <motion.p
                   key={users.length}
                   initial={{ scale: 1.5, opacity: 0 }}
@@ -192,7 +192,7 @@ export default function HomePage() {
               />
             </div>
             <p className="text-xs text-gray-500 mt-2">
-              {users.length < 10 ? `${10 - users.length} more to reach 10 users` : 'Great job! 🎉'}
+              {users.length < 10 ? `${10 - users.length} کاربر دیگر تا رسیدن به 10 کاربر` : 'عالی است! 🎉'}
             </p>
           </div>
         </motion.div>
@@ -249,13 +249,13 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4">
           <p className="text-gray-600 text-sm">
-            Built with ❤️ using{' '}
-            <span className="font-semibold text-primary-600">Next.js</span>,{' '}
-            <span className="font-semibold text-secondary-600">React</span>, and{' '}
+            ساخته شده با ❤️ با استفاده از{' '}
+            <span className="font-semibold text-primary-600">Next.js</span>،{' '}
+            <span className="font-semibold text-secondary-600">React</span> و{' '}
             <span className="font-semibold text-primary-600">TailwindCSS</span>
           </p>
           <p className="text-gray-400 text-xs mt-2">
-            © 2024 User Management System. All rights reserved.
+            © 1403 سیستم مدیریت کاربران. تمامی حقوق محفوظ است.
           </p>
         </div>
       </motion.footer>

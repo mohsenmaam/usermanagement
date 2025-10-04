@@ -1,15 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import ToastProvider from '@/components/ToastProvider';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
-  title: 'User Management System - Modern Dashboard',
-  description: 'A beautiful and modern user management system built with Next.js, React, and TailwindCSS',
-  keywords: ['user management', 'dashboard', 'react', 'nextjs', 'tailwindcss'],
-  authors: [{ name: 'Your Name' }],
+  title: 'سیستم مدیریت کاربران - داشبورد مدرن',
+  description: 'یک سیستم مدیریت کاربران زیبا و مدرن ساخته شده با Next.js، React و TailwindCSS',
+  keywords: ['مدیریت کاربران', 'داشبورد', 'react', 'nextjs', 'tailwindcss'],
+  authors: [{ name: 'نام شما' }],
 };
 
 export default function RootLayout({
@@ -18,8 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="fa" dir="rtl">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+      </head>
+      <body className="font-vazir">
         {children}
         <ToastProvider />
       </body>

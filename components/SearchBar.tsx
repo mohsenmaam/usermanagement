@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Search, X } from 'lucide-react';
 
 /**
- * SearchBar Component - Presentational Component
- * Beautiful animated search bar with clear functionality
+ * کامپوننت SearchBar - کامپوننت Presentational
+ * نوار جستجوی زیبا با انیمیشن و قابلیت پاک کردن
  */
 interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -16,7 +16,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ 
   onSearch, 
-  placeholder = 'Search users by name or email...', 
+  placeholder = 'جستجوی کاربران بر اساس نام یا ایمیل...', 
   className = '' 
 }) => {
   const [query, setQuery] = useState('');

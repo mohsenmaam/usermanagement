@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { UserX, Search } from 'lucide-react';
 
 /**
- * EmptyState Component
- * Displayed when no users are found
+ * کامپوننت EmptyState
+ * نمایش داده می‌شود وقتی کاربری پیدا نشود
  */
 interface EmptyStateProps {
   message?: string;
@@ -14,7 +14,7 @@ interface EmptyStateProps {
 }
 
 const EmptyState: React.FC<EmptyStateProps> = ({ 
-  message = "No users found", 
+  message = "کاربری یافت نشد", 
   isSearching = false 
 }) => {
   return (
@@ -64,8 +64,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         className="text-gray-500 text-center max-w-md"
       >
         {isSearching 
-          ? "Try adjusting your search criteria or clear the search to see all users."
-          : "There are no users in the system yet. Create one to get started!"
+          ? "معیارهای جستجوی خود را تنظیم کنید یا جستجو را پاک کنید تا تمام کاربران را ببینید."
+          : "هنوز کاربری در سیستم وجود ندارد. برای شروع یک کاربر ایجاد کنید!"
         }
       </motion.p>
 

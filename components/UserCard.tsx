@@ -6,8 +6,8 @@ import { User, Mail, Phone, Globe, MapPin, Briefcase, Edit2, Trash2, ChevronDown
 import { User as UserType } from '@/types/user.types';
 
 /**
- * UserCard Component - Presentational Component
- * Beautiful animated card with expand/collapse functionality
+ * کامپوننت UserCard - کامپوننت Presentational
+ * کارت زیبا با انیمیشن و قابلیت باز/بسته شدن
  */
 interface UserCardProps {
   user: UserType;
@@ -85,7 +85,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, index }) =>
               whileTap={{ scale: 0.9 }}
               onClick={() => onEdit(user)}
               className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
-              title="Edit User"
+              title="ویرایش کاربر"
             >
               <Edit2 size={18} />
             </motion.button>
@@ -94,7 +94,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, index }) =>
               whileTap={{ scale: 0.9 }}
               onClick={handleDelete}
               className="p-2 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition-colors"
-              title="Delete User"
+              title="حذف کاربر"
             >
               <Trash2 size={18} />
             </motion.button>
@@ -118,7 +118,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, onEdit, onDelete, index }) =>
           onClick={() => setIsExpanded(!isExpanded)}
           className="w-full mt-4 py-2 flex items-center justify-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
         >
-          <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
+          <span>{isExpanded ? 'نمایش کمتر' : 'نمایش بیشتر'}</span>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}

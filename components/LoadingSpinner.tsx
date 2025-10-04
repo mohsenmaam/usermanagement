@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 
 /**
- * LoadingSpinner Component
- * Beautiful loading animation
+ * کامپوننت LoadingSpinner
+ * انیمیشن بارگذاری زیبا
  */
 const LoadingSpinner: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const LoadingSpinner: React.FC = () => {
         transition={{ delay: 0.2 }}
         className="mt-4 text-gray-600 font-medium"
       >
-        Loading users...
+        در حال بارگذاری کاربران...
       </motion.p>
       <div className="flex gap-2 mt-4">
         {[0, 1, 2].map((i) => (
