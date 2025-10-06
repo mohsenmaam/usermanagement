@@ -86,7 +86,7 @@ const UserForm: React.FC<UserFormProps> = ({
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+        <form onSubmit={handleSubmit} noValidate className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
           <div className="space-y-4">
             {/* Name Field */}
             <div>
@@ -108,7 +108,6 @@ const UserForm: React.FC<UserFormProps> = ({
                     : 'border-gray-200 focus:border-primary-500'
                   }
                 `}
-                required
               />
               <AnimatePresence>
                 {validationErrors.name && (
@@ -144,7 +143,6 @@ const UserForm: React.FC<UserFormProps> = ({
                     : 'border-gray-200 focus:border-primary-500'
                   }
                 `}
-                required
               />
               <AnimatePresence>
                 {validationErrors.username && (
@@ -167,7 +165,7 @@ const UserForm: React.FC<UserFormProps> = ({
                 آدرس ایمیل *
               </label>
               <input
-                type="email"
+                type="text"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -180,7 +178,6 @@ const UserForm: React.FC<UserFormProps> = ({
                     : 'border-gray-200 focus:border-primary-500'
                   }
                 `}
-                required
               />
               <AnimatePresence>
                 {validationErrors.email && (
@@ -203,7 +200,7 @@ const UserForm: React.FC<UserFormProps> = ({
                 شماره تلفن *
               </label>
               <input
-                type="tel"
+                type="text"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
@@ -216,7 +213,6 @@ const UserForm: React.FC<UserFormProps> = ({
                     : 'border-gray-200 focus:border-primary-500'
                   }
                 `}
-                required
               />
               <AnimatePresence>
                 {validationErrors.phone && (
