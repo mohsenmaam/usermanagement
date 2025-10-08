@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import ToastProvider from '@/components/ToastProvider';
 
 export const metadata: Metadata = {
   title: 'سیستم مدیریت کاربران - داشبورد مدرن',
@@ -25,7 +24,6 @@ export default function RootLayout({
       </head>
       <body className="font-vazir">
         {children}
-        <ToastProvider />
       </body>
     </html>
   );

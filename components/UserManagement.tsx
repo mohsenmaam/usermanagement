@@ -9,7 +9,7 @@ import SearchBar from '@/components/SearchBar';
 import UserList from '@/components/UserList';
 import UserForm from '@/components/UserForm';
 import LoadingSpinner from '@/components/LoadingSpinner';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import userService from '@/services/user.service';
 
 /**
@@ -299,6 +299,28 @@ export default function UserManagement({ initialUsers }: UserManagementProps) {
           </p>
         </div>
       </motion.footer>
+
+      {/* Toast Notifications */}
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: '#fff',
+            color: '#374151',
+            padding: '16px',
+            borderRadius: '12px',
+            boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
+            fontFamily: 'Vazir',
+          },
+          success: {
+            iconTheme: { primary: '#10b981', secondary: '#fff' },
+          },
+          error: {
+            iconTheme: { primary: '#ef4444', secondary: '#fff' },
+          },
+        }}
+      />
     </div>
   );
 }
